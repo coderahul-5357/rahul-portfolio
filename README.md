@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #  UI Clone Implementation
 
 ## Proposed Changes (Assuming Option A: IDE/App Layout)
@@ -8,19 +9,47 @@ If we go with the IDE/App layout, here is how the architecture will change:
 - Remove the smooth-scrolling and radial gradients.
 - Enforce a strict `h-screen` layout with no window scrolling (overflow is handled within specific panels).
 - Update color variables to match VS Code / Antigravity dark mode (Background: `#18181b`, Sidebar: `#09090b`, Borders: `#27272a`).
+=======
+# Rahul Endla | Personal Portfolio
 
-### 2. Layout Structure (`app/page.tsx`)
-- Divide the screen into a **Sidebar (Left)** and an **Editor/Main View (Right)**.
-- **Sidebar**: Will list sections as clickable "files".
-- **Editor**: Will display the active section with "tabs" at the top.
+A bold, creative, and responsive personal portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Designed to showcase my experience as a Senior Full Stack Developer & AI/ML Engineer.
 
-### 3. Rewriting Sections
-- **Hero / About**: Formatted like a `.md` readme file or a `.json` configuration file.
-- **Skills**: Displayed like a `package.json` dependencies list or colored terminal output.
-- **Projects**: Displayed as a grid of "Artifacts" or interactive code snippets.
-- **Contact**: A terminal-like command input or a clean settings-form UI.
+## ✨ Features
 
-## Verification Plan
-1. Completely replace the current UI components.
-2. Verify that state management (switching between files/tabs) works flawlessly without hydration errors.
-3. Ensure the mobile view gracefully collapses the sidebar into a hamburger menu while preserving the "App" feel.
+- **Modern Tech Stack**: Next.js 15 App Router, React, Tailwind CSS v4.
+- **Immersive Design**: Custom dark-mode-first aesthetic with glassmorphism components and an animated dynamic background.
+- **Smooth Animations**: Integrated `framer-motion` for scroll-triggered fade-ins and dynamic hover effects.
+- **Form Integration**: Fully functional contact form connected to Formspree.
+- **Mobile Responsive**: Fully responsive layout that adapts gracefully to mobile, tablet, and desktop screens.
+
+## 🚀 Getting Started
+
+First, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/coderahul-5357/rahul-portfolio.git
+cd rahul-portfolio
+npm install
+```
+
+Then, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🛠️ Built With
+
+- [Next.js](https://nextjs.org/) - React Framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [React Icons](https://react-icons.github.io/react-icons/) - Iconography
+- [Formspree](https://formspree.io/) - Contact Form backend
+
+## 📬 Contact
+
+- GitHub: [@coderahul-5357](https://github.com/coderahul-5357)
+- LinkedIn: [Rahul Endla](https://linkedin.com/in/rahulendla)
+- Email: mr.endlarahul@gmail.com
