@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-#  UI Clone Implementation
 
-## Proposed Changes (Assuming Option A: IDE/App Layout)
-
-If we go with the IDE/App layout, here is how the architecture will change:
-
-### 1. Global Layout & Theme (`app/layout.tsx` & `globals.css`)
-- Remove the smooth-scrolling and radial gradients.
-- Enforce a strict `h-screen` layout with no window scrolling (overflow is handled within specific panels).
-- Update color variables to match VS Code / Antigravity dark mode (Background: `#18181b`, Sidebar: `#09090b`, Borders: `#27272a`).
-=======
 # Rahul Endla | Personal Portfolio
 
 A bold, creative, and responsive personal portfolio built with Next.js 15, Tailwind CSS, and Framer Motion. Designed to showcase my experience as a Senior Full Stack Developer & AI/ML Engineer.
