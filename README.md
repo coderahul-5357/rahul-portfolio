@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Antigravity UI Clone Implementation Plan
 
-## Getting Started
+You've requested to change the UI to be a clone of **Antigravity** (my interface). Since Antigravity operates as an AI assistant within an IDE environment, an "Antigravity Clone" usually implies a radical shift from a traditional scrolling website to an interactive, application-like experience.
 
-First, run the development server:
+## User Review Required
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> [!IMPORTANT]  
+> Please confirm which interpretation of "Antigravity Clone" you prefer before I rewrite the UI:
+> 
+> **Option A: The "IDE / Code Editor" Look (Recommended)**
+> - A left sidebar acting as a "File Explorer" (e.g., `hero.tsx`, `projects.json`, `experience.md`).
+> - Clicking a file in the sidebar opens it in the main editor area.
+> - Content is styled with syntax highlighting, line numbers, and a sleek dark theme (`#1e1e1e` background).
+> 
+> **Option B: The "AI Chat" Look**
+> - The portfolio acts like a chat interface.
+> - The user sees prompts like `> tell me about Rahul` and the UI types out the response.
+> - Projects and Experience are presented as "Artifacts" or markdown messages.
+> 
+> **Option C: Just the Aesthetic (Keep it a scrolling website)**
+> - Keep the current layout but change the colors, borders, and fonts to match the exact dark, minimalist, and utilitarian design of the Antigravity chat window.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Proposed Changes (Assuming Option A: IDE/App Layout)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+If we go with the IDE/App layout, here is how the architecture will change:
 
-## Learn More
+### 1. Global Layout & Theme (`app/layout.tsx` & `globals.css`)
+- Remove the smooth-scrolling and radial gradients.
+- Enforce a strict `h-screen` layout with no window scrolling (overflow is handled within specific panels).
+- Update color variables to match VS Code / Antigravity dark mode (Background: `#18181b`, Sidebar: `#09090b`, Borders: `#27272a`).
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Layout Structure (`app/page.tsx`)
+- Divide the screen into a **Sidebar (Left)** and an **Editor/Main View (Right)**.
+- **Sidebar**: Will list sections as clickable "files".
+- **Editor**: Will display the active section with "tabs" at the top.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Rewriting Sections
+- **Hero / About**: Formatted like a `.md` readme file or a `.json` configuration file.
+- **Skills**: Displayed like a `package.json` dependencies list or colored terminal output.
+- **Projects**: Displayed as a grid of "Artifacts" or interactive code snippets.
+- **Contact**: A terminal-like command input or a clean settings-form UI.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Verification Plan
+1. Completely replace the current UI components.
+2. Verify that state management (switching between files/tabs) works flawlessly without hydration errors.
+3. Ensure the mobile view gracefully collapses the sidebar into a hamburger menu while preserving the "App" feel.
