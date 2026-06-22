@@ -1,26 +1,4 @@
-# Antigravity UI Clone Implementation Plan
-
-You've requested to change the UI to be a clone of **Antigravity** (my interface). Since Antigravity operates as an AI assistant within an IDE environment, an "Antigravity Clone" usually implies a radical shift from a traditional scrolling website to an interactive, application-like experience.
-
-## User Review Required
-
-> [!IMPORTANT]  
-> Please confirm which interpretation of "Antigravity Clone" you prefer before I rewrite the UI:
-> 
-> **Option A: The "IDE / Code Editor" Look (Recommended)**
-> - A left sidebar acting as a "File Explorer" (e.g., `hero.tsx`, `projects.json`, `experience.md`).
-> - Clicking a file in the sidebar opens it in the main editor area.
-> - Content is styled with syntax highlighting, line numbers, and a sleek dark theme (`#1e1e1e` background).
-> 
-> **Option B: The "AI Chat" Look**
-> - The portfolio acts like a chat interface.
-> - The user sees prompts like `> tell me about Rahul` and the UI types out the response.
-> - Projects and Experience are presented as "Artifacts" or markdown messages.
-> 
-> **Option C: Just the Aesthetic (Keep it a scrolling website)**
-> - Keep the current layout but change the colors, borders, and fonts to match the exact dark, minimalist, and utilitarian design of the Antigravity chat window.
-
----
+#  UI Clone Implementation
 
 ## Proposed Changes (Assuming Option A: IDE/App Layout)
 
